@@ -1,52 +1,4 @@
-markdown-toc
-
-============
-
-\[!\[Build Status\]\(https:\/\/travis-ci.org\/ardumont\/markdown-toc.png?branch=master\)\]\(https:\/\/travis-ci.org\/ardumont\/markdown-toc\) \[!\[Coverage Status\]\(https:\/\/coveralls.io\/repos\/ardumont\/markdown-toc\/badge.svg?branch=master&service=github\)\]\(https:\/\/coveralls.io\/github\/ardumont\/markdown-toc?branch=master\) \[!\[MELPA Stable\]\(http:\/\/stable.melpa.org\/packages\/markdown-toc-badge.svg\)\]\(http:\/\/stable.melpa.org\/\#\/markdown-toc\) \[!\[MELPA\]\(http:\/\/melpa.org\/packages\/markdown-toc-badge.svg\)\]\(http:\/\/melpa.org\/\#\/markdown-toc\)
-
-&lt;!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc --&gt;
-
-\*\*Table of Contents\*\*
-
-- \[Use\]\(\#use\)
-
- - \[Create\]\(\#create\)
-
- - \[User toc manipulation\]\(\#user-toc-manipulation\)
-
- - \[Update\]\(\#update\)
-
- - \[Create elsewhere\]\(\#create-elsewhere\)
-
- - \[Remove\]\(\#remove\)
-
- - \[Customize\]\(\#customize\)
-
-- \[Install\]\(\#install\)
-
- - \[emacs package repository\]\(\#emacs-package-repository\)
-
- - \[Setup\]\(\#setup\)
-
- - \[melpa stable\]\(\#melpa-stable\)
-
- - \[melpa\]\(\#melpa\)
-
- - \[marmalade\]\(\#marmalade\)
-
- - \[Install\]\(\#install\)
-
- - \[emacs-lisp file\]\(\#emacs-lisp-file\)
-
-- \[Inspiration\]\(\#inspiration\)
-
-&lt;!-- markdown-toc end --&gt;
-
-A simple mode to create TOC in a well-formed markdown file.
-
-Limitations:
-
-The TOC is well-formed if the markdown is. \(cf. \#15\)
+M-x markdown-toc-generate-toc 
 
 \# Use
 
@@ -70,31 +22,34 @@ Here is one possible output:
 
 \*\*Table of Contents\*\*
 
-- \[Use\]\(\#use\)
+* \[Use\]\(\#use\)
 
- - \[Create\]\(\#create\)
+  * \[Create\]\(\#create\)
 
- - \[Update\]\(\#update\)
+  * \[Update\]\(\#update\)
 
- - \[Create elsewhere\]\(\#create-elsewhere\)
+  * \[Create elsewhere\]\(\#create-elsewhere\)
 
-- \[Install\]\(\#install\)
 
- - \[emacs package repository\]\(\#emacs-package-repository\)
+* \[Install\]\(\#install\)
 
- - \[Setup\]\(\#setup\)
+  * \[emacs package repository\]\(\#emacs-package-repository\)
 
- - \[melpa stable\]\(\#melpa-stable\)
+  * \[Setup\]\(\#setup\)
 
- - \[melpa\]\(\#melpa\)
+  * \[melpa stable\]\(\#melpa-stable\)
 
- - \[marmalade\]\(\#marmalade\)
+  * \[melpa\]\(\#melpa\)
 
- - \[Install\]\(\#install\)
+  * \[marmalade\]\(\#marmalade\)
 
- - \[emacs-lisp file\]\(\#emacs-lisp-file\)
+  * \[Install\]\(\#install\)
 
-- \[Inspiration\]\(\#inspiration\)
+  * \[emacs-lisp file\]\(\#emacs-lisp-file\)
+
+
+* \[Inspiration\]\(\#inspiration\)
+
 
 \`\`\`
 
@@ -114,33 +69,33 @@ Example:
 
 '\(\(0 . "some markdown page title"\)
 
- \(0 . "main title"\)
+\(0 . "main title"\)
 
- \(1 . "Sources"\)
+\(1 . "Sources"\)
 
- \(2 . "Marmalade \(recommended\)"\)
+\(2 . "Marmalade \(recommended\)"\)
 
- \(2 . "Melpa-stable"\)
+\(2 . "Melpa-stable"\)
 
- \(2 . "Melpa \(~snapshot\)"\)
+\(2 . "Melpa \(~snapshot\)"\)
 
- \(1 . "Install"\)
+\(1 . "Install"\)
 
- \(2 . "Load org-trello"\)
+\(2 . "Load org-trello"\)
 
- \(2 . "Alternative"\)
+\(2 . "Alternative"\)
 
- \(3 . "Git"\)
+\(3 . "Git"\)
 
- \(3 . "Tar"\)
+\(3 . "Tar"\)
 
- \(0 . "another title"\)
+\(0 . "another title"\)
 
- \(1 . "with"\)
+\(1 . "with"\)
 
- \(1 . "some"\)
+\(1 . "some"\)
 
- \(1 . "heading"\)\)
+\(1 . "heading"\)\)
 
 \`\`\`
 
@@ -160,13 +115,13 @@ Or drop all h1 titles... or whatever:
 
 \(custom-set-variables '\(markdown-toc-user-toc-structure-manipulation-fn
 
- \(lambda \(toc-structure\)
+\(lambda \(toc-structure\)
 
- \(-filter \(lambda \(l\) \(let \(\(index \(car l\)\)\)
+\(-filter \(lambda \(l\) \(let \(\(index \(car l\)\)\)
 
- \(&lt;= 1 index\)\)\)
+\(&lt;= 1 index\)\)\)
 
- toc-structure\)\)\)
+toc-structure\)\)\)
 
 \`\`\`
 
@@ -206,11 +161,11 @@ Customize them as following format:
 
 \(custom-set-variables
 
- '\(markdown-toc-header-toc-start "&lt;!-- customized start--&gt;"\)
+'\(markdown-toc-header-toc-start "&lt;!-- customized start--&gt;"\)
 
- '\(markdown-toc-header-toc-title "\*\*customized title\*\*"\)
+'\(markdown-toc-header-toc-title "\*\*customized title\*\*"\)
 
- '\(markdown-toc-header-toc-end "&lt;!-- customized end --&gt;"\)\)
+'\(markdown-toc-header-toc-end "&lt;!-- customized end --&gt;"\)\)
 
 \`\`\`
 
@@ -230,7 +185,7 @@ You need to add melpa or melpa-stable package repository before installing it.
 
 \(add-to-list 'package-archives '\("melpa-stable" .
 
- "http:\/\/melpa-stable.milkbox.net\/packages\/"\)\)
+"http:\/\/melpa-stable.milkbox.net\/packages\/"\)\)
 
 \(package-initialize\)
 
@@ -246,7 +201,7 @@ Then hit &lt;kbd&gt;M-x eval-buffer&lt;\/kbd&gt; to evaluate the buffer's conten
 
 \(add-to-list 'package-archives '\("melpa" .
 
- "http:\/\/melpa.milkbox.net\/packages\/"\)\)
+"http:\/\/melpa.milkbox.net\/packages\/"\)\)
 
 \(package-initialize\)
 
@@ -262,7 +217,7 @@ Then hit &lt;kbd&gt;M-x eval-buffer&lt;\/kbd&gt; to evaluate the buffer's conten
 
 \(add-to-list 'package-archives '\("marmalade" .
 
- "http:\/\/marmalade-repo.org\/packages\/"\)\)
+"http:\/\/marmalade-repo.org\/packages\/"\)\)
 
 \(package-initialize\)
 
@@ -285,6 +240,4 @@ https:\/\/github.com\/thlorenz\/doctoc
 The problem I had with doctoc is the installation process.
 
 I do not want to install the node tools just for this.
-
-
 
