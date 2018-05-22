@@ -1,6 +1,4 @@
-M-x markdown-toc-generate-toc
-
-===========================
+\[toc\]
 
 \# Use
 
