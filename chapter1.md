@@ -1,4 +1,6 @@
-M-x markdown-toc-generate-toc 
+M-x markdown-toc-generate-toc
+
+===========================
 
 \# Use
 
@@ -31,6 +33,7 @@ Here is one possible output:
   * \[Create elsewhere\]\(\#create-elsewhere\)
 
 
+
 * \[Install\]\(\#install\)
 
   * \[emacs package repository\]\(\#emacs-package-repository\)
@@ -48,8 +51,8 @@ Here is one possible output:
   * \[emacs-lisp file\]\(\#emacs-lisp-file\)
 
 
-* \[Inspiration\]\(\#inspiration\)
 
+* \[Inspiration\]\(\#inspiration\)
 
 \`\`\`
 
