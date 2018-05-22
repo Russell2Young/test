@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* \[概述\]\(README.md\)
-* \[第一章\]\(chapter1.md\)
-* \[第二章\]\(chapter2.md\)
+* \[readme\]\(README.md\)
+* \[chapter1\]\(chapter1.md\)
+* \[chapter2\]\(chapter2.md\)
 
